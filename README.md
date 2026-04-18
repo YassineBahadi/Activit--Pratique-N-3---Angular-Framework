@@ -1,59 +1,162 @@
-# L4N13BL14App
+# 🚀 L4N13BL14 App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+Application full-stack de gestion de produits développée avec :
 
-## Development server
+* 🅰️ Angular 19 (Frontend)
+* ☕ Spring Boot (Backend)
+* 🗄️ H2 Database (in-memory)
+* 🎨 Bootstrap + Bootstrap Icons
+* 🔗 REST API + HttpClient
 
-To start a local development server, run:
+---
+
+## 📌 Architecture du projet
+
+```
+L4N13BL14-App
+│
+├── frontend/   (Angular 19)
+│   ├── src/app
+│   ├── services
+│   ├── components (home, products)
+│
+├── backend/    (Spring Boot)
+│   ├── entities
+│   ├── repository
+│   ├── web (REST API)
+```
+
+---
+
+## ⚙️ Features
+
+### Frontend (Angular)
+
+* 📋 Affichage des produits sous forme de tableau
+* ➕ Sélection/désélection des produits
+* 🗑️ Suppression avec confirmation (modal)
+* 🔄 Communication avec backend via HTTP
+* 🎯 Routing Angular (Home / Products)
+* 🎨 UI moderne avec Bootstrap
+
+### Backend (Spring Boot)
+
+* REST API complète :
+
+  * `GET /products` → liste produits
+  * `GET /products/{id}` → produit par ID
+  * `DELETE /products/{id}` → supprimer produit
+* 🗄️ Base de données H2 en mémoire
+* 🌱 Initialisation automatique des données (CommandLineRunner)
+* 🔓 CORS activé pour Angular
+
+---
+
+## 🚀 Lancer le projet
+
+### 1️⃣ Backend (Spring Boot)
 
 ```bash
+cd backend
+mvn spring-boot:run
+```
+
+📍 Backend URL:
+
+```
+http://localhost:8083
+```
+
+📍 H2 Console:
+
+```
+http://localhost:8083/h2-console
+```
+
+---
+
+### 2️⃣ Frontend (Angular)
+
+```bash
+cd frontend
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+📍 Frontend URL:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## 🔗 API Configuration
+
+```ts
+getAllProducts(): Observable<any> {
+  return this.http.get("http://localhost:8083/products");
+}
 ```
 
-## Building
+---
 
-To build the project run:
+## 🧠 Concepts utilisés
 
-```bash
-ng build
+### Angular
+
+* Standalone Components
+* Routing
+* Data Binding
+* Event Binding
+* Services + Dependency Injection
+* Observables (RxJS)
+* HttpClient
+* FormsModule
+
+### Spring Boot
+
+* REST API
+* Spring Data JPA
+* Dependency Injection
+* H2 Database
+* CommandLineRunner
+
+---
+
+## 🔐 CORS Policy
+
+```java
+@CrossOrigin("*")
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📦 Technologies utilisées
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Frontend
 
-```bash
-ng test
-```
+* Angular 19
+* Bootstrap 5
+* Bootstrap Icons
+* RxJS
 
-## Running end-to-end tests
+### Backend
 
-For end-to-end (e2e) testing, run:
+* Spring Boot
+* Spring Data JPA
+* H2 Database
+* Maven
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 👨‍💻 Author
 
-## Additional Resources
+* Yassine Bahadi
+* Full Stack Developer (Angular / Spring Boot)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## ⭐ Objectif
+
+Projet
