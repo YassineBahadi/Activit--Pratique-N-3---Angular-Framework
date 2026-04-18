@@ -153,10 +153,15 @@ getAllProducts(): Observable<any> {
 ## 👨‍💻 Author
 
 * Yassine Bahadi
-* Full Stack Developer (Angular / Spring Boot)
+* software engineer student at enset mohammedia
 
 ---
 
 ## ⭐ Objectif
 
-Projet
+Projet full-stack pour apprendre :
+
+* Angular moderne
+* Spring Boot REST API
+* Architecture client/serveur
+* Communication HTTP
